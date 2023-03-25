@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>RelayState</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        function SubmitMe() {
+            var RPID = encodeURIComponent(document.getElementById('txtRPID').value.trim());
+            var RelayState = encodeURIComponent(document.getElementById('txtRelayState').value.trim());
+            var unencoded = "RPID=" + RPID + "&RelayState=" + RelayState;
+            var result = document.getElementById('txtURL').value + "?RelayState=" + encodeURIComponent(unencoded);
+            document.getElementById('relayStateResult').value = result;
+        }
+    </script>
+
+    <div id="content" role="main">
+        <h1>ADFS RelayState Generator</h1>
+        <label for="txtURL">IdP-initiated Sign-on URL</label>
+        <input type="text" placeholder="https://adfs.contoso.com/adfs/ls/idpinitiatedsignon.aspx" class="textbox"
+            id="txtURL" style="width:95%;" />
+        <br />
+        <label for="txtRPID">Relying Party Identifier</label>
+        <input type="text" placeholder="URI:RelyingParty" class="textbox" id="txtRPID" style="width:95%;" />
+        <br />
+        <label for="txtRelayState">RelayState / Target App</label>
+        <input type="text" placeholder="https://app.relyingparty.com/?RelayState=mobile" class="textbox" id="txtRelayState" style="width:95%;" />
+        <br />
+        <br />
+        <button class="button" onclick="SubmitMe()"><span>Generate URL </span></button>
+        <br />
+        <h2>Results:</h2>
+        <textarea id="relayStateResult" name="relayStateResult" style="width:95%;height:125px;"
+            class="textbox"></textarea>
+</body>
+
+</html>

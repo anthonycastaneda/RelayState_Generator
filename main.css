@@ -1,0 +1,82 @@
+:root {
+    --blue: #205493;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+div {
+    background-color: white;
+    max-width: 1000px;
+    border: 150px solid var(--blue);
+    padding: 50px;
+    margin: auto;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 95%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+.textbox {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button {
+    background-color: #112e51;
+    border: hidden;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
