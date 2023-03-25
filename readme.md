@@ -1,5 +1,11 @@
 # ADFS RelayState Generator
 
+![forthebadge](https://forthebadge.com/images/badges/ctrl-c-ctrl-v.svg)
+
+This a super simple webpage that helps you construct ADFS RelayState URLs.  These days (2023) ADFS docs are scant, so I'm dropping this on GitHub in case another harried admin needs it.
+
+## What is ADFS RelayState?
+
 ADFS Relay State is a parameter used in SAML Implementation to identify a specific resource on a resource provider. For example: To identify an account record in Salesforce.
 
 Relay State specifies the path to which a user would be redirected, once the Identity Provider authenticates the user.
@@ -10,7 +16,7 @@ If a user is not authenticated earlier, then user is redirected to the ADFS auth
 
 ## Acknowledgements
 
-- [Jack Stromberg's Site](https://jackstromberg.com/adfs-relay-state-generator/) (I stole the code in case his site ever goes offline. I did try to fancy it up a little bit with some CSS/)
+- [Jack Stromberg's Site](https://jackstromberg.com/adfs-relay-state-generator/) (I stole the code in case his site ever goes offline. I did try to fancy it up a little bit with some CSS)
 - [BMC Docs](https://docs.bmc.com/docs/BMCHelixRemedyforce/201902/en/adfs-2-0-relay-state-868129786.html) (I stole the copy for the ReadMe above)
 - [Really old Microsoft blog about RelayState](https://learn.microsoft.com/en-us/archive/blogs/askds/ad-fs-2-0-relaystate)
 
@@ -21,3 +27,5 @@ If a user is not authenticated earlier, then user is redirected to the ADFS auth
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+![forthebadge](https://forthebadge.com/images/badges/validated-html2.svg)
