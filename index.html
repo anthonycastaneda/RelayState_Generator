@@ -16,10 +16,10 @@
 
     <script type="text/javascript">
         function SubmitMe() {
-            var RPID = encodeURIComponent(document.getElementById('txtRPID').value.trim());
-            var RelayState = encodeURIComponent(document.getElementById('txtRelayState').value.trim());
-            var unencoded = "RPID=" + RPID + "&RelayState=" + RelayState;
-            var result = document.getElementById('txtURL').value + "?RelayState=" + encodeURIComponent(unencoded);
+            let RPID = encodeURIComponent(document.getElementById('txtRPID').value.trim());
+            let RelayState = encodeURIComponent(document.getElementById('txtRelayState').value.trim());
+            let unencoded = "RPID=" + RPID + "&RelayState=" + RelayState;
+            let result = document.getElementById('txtURL').value + "?RelayState=" + encodeURIComponent(unencoded);
             document.getElementById('relayStateResult').value = result;
         }
     </script>
